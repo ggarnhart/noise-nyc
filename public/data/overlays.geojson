@@ -1,0 +1,762 @@
+{
+ "type": "FeatureCollection",
+ "note": "Starter subset, block-level accuracy. Regenerate the full OSM dataset with: npm run fetch:overlays",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.9766,
+     40.7392
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "Bellevue Hospital"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.9739,
+     40.7421
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "NYU Langone Tisch Hospital"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.954,
+     40.7645
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "NewYork-Presbyterian / Weill Cornell"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.9568,
+     40.7641
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "Memorial Sloan Kettering"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.9603,
+     40.7741
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "Lenox Hill Hospital"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.9526,
+     40.79
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "Mount Sinai Hospital"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.944,
+     40.7853
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "NYC Health + Hospitals / Metropolitan"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.9397,
+     40.8145
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "Harlem Hospital Center"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.9423,
+     40.8404
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "NewYork-Presbyterian / Columbia"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.9617,
+     40.8053
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "Mount Sinai Morningside"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.9878,
+     40.7695
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "Mount Sinai West"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -74.0053,
+     40.7103
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "NewYork-Presbyterian Lower Manhattan"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -74.0011,
+     40.7377
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "Lenox Health Greenwich Village ER"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.9787,
+     40.6684
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "NewYork-Presbyterian Brooklyn Methodist"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.9987,
+     40.6394
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "Maimonides Medical Center"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.9445,
+     40.6557
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "Kings County Hospital"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.9124,
+     40.6572
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "Brookdale Hospital"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.9418,
+     40.7002
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "NYC Health + Hospitals / Woodhull"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.9177,
+     40.7043
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "Wyckoff Heights Medical Center"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.9776,
+     40.6906
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "Brooklyn Hospital Center"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.9648,
+     40.5859
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "NYC Health + Hospitals / Coney Island"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -74.0107,
+     40.6486
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "NYU Langone Hospital — Brooklyn"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.9367,
+     40.6789
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "Interfaith Medical Center"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.8859,
+     40.7442
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "NYC Health + Hospitals / Elmhurst"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.825,
+     40.7472
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "NewYork-Presbyterian Queens"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.8163,
+     40.7009
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "Jamaica Hospital Medical Center"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.7963,
+     40.7128
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "NYC Health + Hospitals / Queens"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.9256,
+     40.7686
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "Mount Sinai Queens"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.8236,
+     40.7519
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "Flushing Hospital Medical Center"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.842,
+     40.7196
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "LIJ Forest Hills"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.9254,
+     40.8163
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "NYC Health + Hospitals / Lincoln"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.9107,
+     40.8354
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "BronxCare Health System"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.8916,
+     40.8461
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "St. Barnabas Hospital"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.8458,
+     40.8567
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "NYC Health + Hospitals / Jacobi"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.8785,
+     40.8809
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "Montefiore Moses Campus"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -74.0876,
+     40.5852
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "Staten Island University Hospital North"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -74.1092,
+     40.6362
+    ]
+   },
+   "properties": {
+    "kind": "hospital",
+    "name": "Richmond University Medical Center"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -74.0066,
+     40.7196
+    ]
+   },
+   "properties": {
+    "kind": "fire_station",
+    "name": "FDNY Hook & Ladder 8 (Tribeca)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.9925,
+     40.7267
+    ]
+   },
+   "properties": {
+    "kind": "fire_station",
+    "name": "FDNY Engine 33 / Ladder 9 (NoHo)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.9843,
+     40.7318
+    ]
+   },
+   "properties": {
+    "kind": "fire_station",
+    "name": "FDNY Engine 5 (East Village)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.989,
+     40.7332
+    ]
+   },
+   "properties": {
+    "kind": "fire_station",
+    "name": "FDNY Ladder 3 (East Village)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -74.0033,
+     40.7288
+    ]
+   },
+   "properties": {
+    "kind": "fire_station",
+    "name": "FDNY Engine 24 / Ladder 5 (West Village)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.9713,
+     40.7558
+    ]
+   },
+   "properties": {
+    "kind": "fire_station",
+    "name": "FDNY Engine 8 / Ladder 2 (Midtown East)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.9819,
+     40.7668
+    ]
+   },
+   "properties": {
+    "kind": "fire_station",
+    "name": "FDNY Engine 23 (Midtown West)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.9835,
+     40.7746
+    ]
+   },
+   "properties": {
+    "kind": "fire_station",
+    "name": "FDNY Engine 40 / Ladder 35 (Lincoln Sq)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.9754,
+     40.7861
+    ]
+   },
+   "properties": {
+    "kind": "fire_station",
+    "name": "FDNY Engine 74 (Upper West Side)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.9445,
+     40.8005
+    ]
+   },
+   "properties": {
+    "kind": "fire_station",
+    "name": "FDNY Engine 58 / Ladder 26 (Harlem)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.9917,
+     40.7003
+    ]
+   },
+   "properties": {
+    "kind": "fire_station",
+    "name": "FDNY Engine 205 / Ladder 118 (Bklyn Heights)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.952,
+     40.6931
+    ]
+   },
+   "properties": {
+    "kind": "fire_station",
+    "name": "FDNY Engine 209 / Ladder 102 (Bed-Stuy)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.944,
+     40.6853
+    ]
+   },
+   "properties": {
+    "kind": "fire_station",
+    "name": "FDNY Engine 235 (Bed-Stuy)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -74.0084,
+     40.6768
+    ]
+   },
+   "properties": {
+    "kind": "fire_station",
+    "name": "FDNY Engine 279 / Ladder 131 (Red Hook)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.937,
+     40.753
+    ]
+   },
+   "properties": {
+    "kind": "fire_station",
+    "name": "FDNY Engine 260 (Long Island City)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.8611,
+     40.748
+    ]
+   },
+   "properties": {
+    "kind": "fire_station",
+    "name": "FDNY Engine 289 / Ladder 138 (Corona)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.887,
+     40.856
+    ]
+   },
+   "properties": {
+    "kind": "fire_station",
+    "name": "FDNY Engine 88 / Ladder 38 (Belmont)"
+   }
+  }
+ ]
+}

@@ -1,0 +1,123 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "maplibre-gl/dist/maplibre-gl.css";
+
+/*
+  noise.nyc — a night-time city palette.
+  Dark-only by design: deep ink blue, lamplight amber, neon accents.
+*/
+:root {
+  --background: oklch(0.16 0.025 275);
+  --foreground: oklch(0.95 0.01 260);
+  --card: oklch(0.2 0.03 275);
+  --card-foreground: oklch(0.95 0.01 260);
+  --popover: oklch(0.21 0.03 275);
+  --popover-foreground: oklch(0.95 0.01 260);
+  --primary: oklch(0.83 0.14 80);
+  --primary-foreground: oklch(0.24 0.06 70);
+  --secondary: oklch(0.27 0.035 275);
+  --secondary-foreground: oklch(0.93 0.01 260);
+  --muted: oklch(0.25 0.03 275);
+  --muted-foreground: oklch(0.7 0.02 265);
+  --accent: oklch(0.3 0.05 300);
+  --accent-foreground: oklch(0.95 0.01 260);
+  --destructive: oklch(0.65 0.2 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.32 0.03 275);
+  --input: oklch(0.32 0.03 275);
+  --ring: oklch(0.83 0.14 80);
+  --radius: 0.75rem;
+
+  /* Noise scale: 1 silent → 4 can't sleep */
+  --noise-1: #34d399;
+  --noise-2: #a3e635;
+  --noise-3: #fb923c;
+  --noise-4: #f87171;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-noise-1: var(--noise-1);
+  --color-noise-2: var(--noise-2);
+  --color-noise-3: var(--noise-3);
+  --color-noise-4: var(--noise-4);
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-display), var(--font-body), ui-sans-serif,
+    system-ui, sans-serif;
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Soft city-glow background for hero sections */
+.night-glow {
+  background:
+    radial-gradient(60rem 30rem at 85% -10%, oklch(0.35 0.09 300 / 0.5), transparent 60%),
+    radial-gradient(50rem 26rem at 0% 10%, oklch(0.4 0.1 80 / 0.28), transparent 60%),
+    radial-gradient(40rem 30rem at 50% 110%, oklch(0.3 0.08 250 / 0.5), transparent 65%);
+}
+
+/* MapLibre popup restyled for the dark theme */
+.maplibregl-popup-content {
+  background: var(--popover);
+  color: var(--popover-foreground);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 0.75rem 0.9rem;
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 0.45);
+}
+.maplibregl-popup-anchor-bottom .maplibregl-popup-tip {
+  border-top-color: var(--popover);
+}
+.maplibregl-popup-anchor-top .maplibregl-popup-tip {
+  border-bottom-color: var(--popover);
+}
+.maplibregl-popup-anchor-left .maplibregl-popup-tip {
+  border-right-color: var(--popover);
+}
+.maplibregl-popup-anchor-right .maplibregl-popup-tip {
+  border-left-color: var(--popover);
+}
+.maplibregl-popup-close-button {
+  color: var(--muted-foreground);
+  font-size: 1.1rem;
+  padding: 0 0.4rem;
+}
+.maplibregl-ctrl-attrib {
+  background: rgb(10 10 20 / 0.6) !important;
+  color: #9ca3af;
+}
+.maplibregl-ctrl-attrib a {
+  color: #9ca3af;
+}
