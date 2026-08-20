@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import type { Map as MLMap, Marker } from "maplibre-gl";
-import { DARK_STYLE } from "@/lib/map-style";
+import { configureMapLibreWorker, DARK_STYLE } from "@/lib/map-style";
 import { NYC_BOUNDS, NYC_CENTER } from "@/lib/constants";
 
 type Props = {
@@ -32,6 +32,7 @@ export function MiniMap({ value, onChange, className }: Props) {
     (async () => {
       const maplibregl = await import("maplibre-gl");
       if (cancelled || !containerRef.current || mapRef.current) return;
+      configureMapLibreWorker(maplibregl.setWorkerUrl);
 
       const initial = valueRef.current;
       const map = new maplibregl.Map({

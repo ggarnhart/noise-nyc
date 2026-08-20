@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import type { Map as MLMap, MapLayerMouseEvent } from "maplibre-gl";
-import { DARK_STYLE } from "@/lib/map-style";
+import { configureMapLibreWorker, DARK_STYLE } from "@/lib/map-style";
 import {
   NOISE_SOURCES,
   NYC_BOUNDS,
@@ -83,6 +83,12 @@ export function NoiseMap({ reports, metric, showFirehouses, showHospitals }: Pro
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<MLMap | null>(null);
   const readyRef = useRef(false);
+  // The map's `load` event can fire before or after the reports fetch and any
+  // control toggles, so the load handler must read current values via refs —
+  // its closure would otherwise pin the props from the initial render.
+  const reportsRef = useRef(reports);
+  const metricRef = useRef(metric);
+  const overlaysRef = useRef({ fire: showFirehouses, hosp: showHospitals });
 
   // Init once
   useEffect(() => {
@@ -90,6 +96,7 @@ export function NoiseMap({ reports, metric, showFirehouses, showHospitals }: Pro
     (async () => {
       const maplibregl = await import("maplibre-gl");
       if (cancelled || !containerRef.current || mapRef.current) return;
+      configureMapLibreWorker(maplibregl.setWorkerUrl);
 
       const map = new maplibregl.Map({
         container: containerRef.current,
@@ -211,8 +218,13 @@ export function NoiseMap({ reports, metric, showFirehouses, showHospitals }: Pro
         map.on("mouseleave", "reports-dots", () => (map.getCanvas().style.cursor = ""));
 
         readyRef.current = true;
-        syncData(map, reports);
-        syncVisibility(map, showFirehouses, showHospitals);
+        syncData(map, reportsRef.current);
+        const expr = NOISE_COLOR_EXPR(
+          metricRef.current === "street_noise" ? "street_noise" : "neighbor_noise"
+        );
+        map.setPaintProperty("reports-dots", "circle-color", expr);
+        map.setPaintProperty("reports-glow", "circle-color", expr);
+        syncVisibility(map, overlaysRef.current.fire, overlaysRef.current.hosp);
       });
     })();
 
@@ -227,12 +239,14 @@ export function NoiseMap({ reports, metric, showFirehouses, showHospitals }: Pro
 
   // Sync data
   useEffect(() => {
+    reportsRef.current = reports;
     const map = mapRef.current;
     if (map && readyRef.current) syncData(map, reports);
   }, [reports]);
 
   // Sync metric coloring
   useEffect(() => {
+    metricRef.current = metric;
     const map = mapRef.current;
     if (!map || !readyRef.current) return;
     map.setPaintProperty("reports-dots", "circle-color", NOISE_COLOR_EXPR(metric));
@@ -241,11 +255,15 @@ export function NoiseMap({ reports, metric, showFirehouses, showHospitals }: Pro
 
   // Sync overlay visibility
   useEffect(() => {
+    overlaysRef.current = { fire: showFirehouses, hosp: showHospitals };
     const map = mapRef.current;
     if (map && readyRef.current) syncVisibility(map, showFirehouses, showHospitals);
   }, [showFirehouses, showHospitals]);
 
-  return <div ref={containerRef} className="absolute inset-0" />;
+  // Explicit h/w rather than absolute inset-0: maplibre stamps its own
+  // `.maplibregl-map { position: relative }` on this div, which can override
+  // the `absolute` utility and collapse the height to 0.
+  return <div ref={containerRef} className="h-full w-full" />;
 }
 
 function syncData(map: MLMap, reports: Report[]) {

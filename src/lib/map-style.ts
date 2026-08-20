@@ -1,6 +1,22 @@
 import type { StyleSpecification } from "maplibre-gl";
 
 /**
+ * Point MapLibre at the worker files copied into public/maplibre/ by
+ * scripts/copy-maplibre-worker.mjs. The bundler-emitted worker asset breaks
+ * its relative import of maplibre-gl-shared.mjs (hashed file names), which
+ * kills the worker and silently blanks every GeoJSON layer. Call before the
+ * first Map is constructed.
+ */
+let workerConfigured = false;
+export function configureMapLibreWorker(
+  setWorkerUrl: (url: string) => void
+): void {
+  if (workerConfigured) return;
+  workerConfigured = true;
+  setWorkerUrl("/maplibre/maplibre-gl-worker.mjs");
+}
+
+/**
  * Dark raster basemap from CARTO (free tier, attribution required).
  * Big roads, parks and water read clearly at night — exactly the context
  * you want when judging why a block is loud.
